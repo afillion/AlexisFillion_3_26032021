@@ -2,19 +2,61 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $thrid-color: #99E2D0;
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+
+
 .referencement {
   display: none;
 }
 
-.step-btn {
-  &__number {
+body {
+  margin: 0;
+  font-family: Roboto;
+}
 
+aside {
+  padding: 1rem;
+}
+
+.step-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  box-shadow: 0 .25rem .5rem #e5e5e5;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+  &:hover {
+    background-color: lighten($primary-color, 35%);
+  }
+  &__number {
+    background-color: $primary-color;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    color: white;
+    margin-left: -.5rem;
   }
   &__icon {
-
+    align-self: center;
+    margin: 1rem;
+    color: #c9c9c9;
+    //:hover > &  = SCSS selector that essentially looks at the parent node to determine if the child was within a :hover pseudo-class. 
+    :hover > & {
+      color: $primary-color;
+    }
   }
   &__txt {
-
+    & a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+    }
   }
 }
 
@@ -32,6 +74,13 @@ $thrid-color: #99E2D0;
 
   }
   &--white {
-    
+    // filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(286deg) brightness(104%) contrast(101%);
+    color: #fff;
+    font-family: Shrikhand,"cursive";
+    font-size: 1.2rem;
   }
+}
+
+footer {
+  background-color: #353535;
 }
