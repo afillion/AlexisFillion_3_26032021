@@ -1,6 +1,7 @@
 @import "../partiels/logo";
 @import "../partiels/colors";
-@import "../partiels/font";
+@import "../partiels/fonts";
+@import "../partiels/footer";
 
 $home-width-list: (1:50%, 2:75%);
 @mixin home-width {
@@ -49,7 +50,7 @@ article {
     margin-bottom: 3rem;
     border: 1px transparent;
     border-radius: 3rem;
-    background-image: radial-gradient(farthest-side, $secondary-color, $primary-color);
+    background-image: linear-gradient(to bottom right,  $secondary-color, $primary-color);
     color: white;
     font-weight: bold;
   }
@@ -103,10 +104,12 @@ aside {
 }
 
 .menu-card {
+  height: 10rem;
   &__img {
     width: 100%;
     & > img {
       width: 100%;
+      max-height: 50%;
     }
   }
   &__icon {
@@ -127,5 +130,5 @@ aside {
 }
 
 footer {
-  background-color: #353535;
+  @include footer;
 }
