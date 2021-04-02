@@ -1,13 +1,22 @@
 @import "./partiels/logo";
-
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$thrid-color: #99E2D0;
-$light-grey: #f5f5f5;
-$grey: #e5e5e5;
-$dark-grey: #c9c9c9;
+@import "./partiels/colors";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@font-face {
+  font-family: Roboto;
+}
+@font-face {
+  font-family: Shrikhand;
+}
+
+$home-width-list: (1:50%, 2:75%);
+@mixin home-width {
+  @each $key, $value in $home-width-list {
+    &:nth-child(#{$key}) {
+      max-width: $value;
+    }
+  }
+}
 
 .referencement {
   display: none;
@@ -23,7 +32,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: white;
-  border-bottom: 2px solid $grey;
+  border-bottom: 2px solid #646464;
   padding-top: 1rem;
 }
 
@@ -34,6 +43,20 @@ header {
   width: 100%;
   min-height: 3rem;
   background-color: $grey;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  background-color:$light-grey;
+  text-align: center;
+  align-items: center;
+  h1 {
+    max-width: 50%;
+  }
+  p {
+    max-width: 75%;
+  }
 }
 
 aside {
@@ -80,6 +103,12 @@ aside {
       text-decoration: none;
       font-weight: 500;
     }
+  }
+}
+
+figure {
+  &:hover {
+
   }
 }
 
