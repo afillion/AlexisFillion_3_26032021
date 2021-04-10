@@ -1,3 +1,5 @@
+@import "../partiels/keyframes";
+
 .menus-header {
   display: flex;
   .return-icon {
@@ -37,8 +39,10 @@
       background-image: linear-gradient(to bottom right,  $secondary-color, $primary-color);
       color: white;
       font-weight: bold;
+      box-shadow: .25rem .25rem 1rem $grey;
       &:hover {
         opacity: .8;
+        box-shadow: .25rem .25rem 1rem $dark-grey;
       }  
     }
   }
@@ -93,20 +97,38 @@
   flex-direction: row;
   box-shadow: .25rem .25rem 1rem $dark-grey;
   height: 4.5rem;
-  &:hover {
-    transform: scale(1.02);
+  overflow: hidden;
+  .check-wrapper {
+    width: 0;
+    min-width: 0;
+    background-color: $thrid-color;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 1rem 1rem 0;
+    transition: width 500ms ease-in-out, min-width 500ms ease-in-out;
     &::after {
       font-family: "Font Awesome 5 Free";
       content: "\f058";
-      min-width: 3rem;
-      background-color: $thrid-color;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0 1rem 1rem 0;
       color: white;
       font-weight: 900;
+      font-size: 1.2rem;
+    }
+  }
+  &:hover {
+    transform: scale(1.01);
+    .check-wrapper {
+      width: 3.5rem;
+      min-width: 3.5rem;
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f058";
+        color: white;
+        font-weight: 900;
+        font-size: 1.2rem;
+        animation: check 500ms ease-in-out;
+      }
     }
   }
   &__header {
@@ -124,6 +146,6 @@
   &__price {
     margin-left: auto;
     align-self: center;
-    padding-right: 1rem;
+    margin-right: 1rem;
   }
 }
