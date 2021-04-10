@@ -53,6 +53,9 @@ $home-width-list: (1:50%, 2:75%);
     background-image: linear-gradient(to bottom right,  $secondary-color, $primary-color);
     color: white;
     font-weight: bold;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 
