@@ -81,6 +81,9 @@
   box-shadow: .25rem .25rem 1rem $dark-grey;
   height: 4.5rem;
   overflow: hidden;
+  animation: popitem 1s linear;
+  animation-fill-mode: forwards;
+  transform: scale(0);
   .check-wrapper {
     width: 0;
     min-width: 0;
@@ -100,7 +103,6 @@
     }
   }
   &:hover {
-    transform: scale(1.01);
     .check-wrapper {
       width: 3.5rem;
       min-width: 3.5rem;
@@ -130,6 +132,12 @@
     margin-left: auto;
     align-self: center;
     margin-right: 1rem;
+  }
+}
+
+@for $i from 1 to 10 {
+  .delay-#{$i} {
+    animation-delay:  #{$i/10}s;
   }
 }
 

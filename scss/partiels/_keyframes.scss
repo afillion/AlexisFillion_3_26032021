@@ -41,7 +41,7 @@
   }
 }
 
-@keyframes test {
+@keyframes bodyoverflow {
   from {
     z-index: 1;
     overflow: hidden;
@@ -49,5 +49,14 @@
   to {
     overflow: hidden;
     z-index: 1;
+  }
+}
+
+@keyframes popitem {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }

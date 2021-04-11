@@ -7,44 +7,8 @@
 
 body {
   margin: 0;
-  height: 100%;
+  height: 0;
   font-family: Roboto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: visible;
-  animation: test 3s linear;
-  .loader-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    background-color: white;
-    z-index: -1;
-    animation: test 3s linear;
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      content: "\f110";
-      font-weight: 900;
-      font-size: 5rem;
-      position: absolute;
-      opacity: 0;
-      animation: loadspinner1 3s linear;
-      color: $primary-color;
-    }
-    &::after {
-      font-family: "Font Awesome 5 Free";
-      content: "\f110";
-      font-weight: 900;
-      font-size: 5rem;
-      position: absolute;
-      opacity: 0;
-      animation: loadspinner2 3s linear;
-      color: $thrid-color;
-    }
-  }
 }
 
 h1, h2, h3, p {
