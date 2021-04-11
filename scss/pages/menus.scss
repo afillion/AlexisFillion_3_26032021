@@ -1,4 +1,5 @@
 @import "../partiels/keyframes";
+@import "../partiels/hearth";
 
 .menus-header {
   display: flex;
@@ -55,24 +56,7 @@
   &__title {
     font-family: Shrikhand;
   }
-  &__icon {
-    align-self: center;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    color: $dark-grey;
-    .fas {
-      display: none;
-    }
-    &:hover {
-      color: $secondary-color;
-      .far {
-        display: none;
-      }
-      .fas {
-        display: unset;
-      }
-    }
-  }
+  @include hearth('.menu-header');
 }
 
 .menu-step {

@@ -2,6 +2,7 @@
 @import "../partiels/colors";
 @import "../partiels/fonts";
 @import "../partiels/footer";
+@import "../partiels/hearth";
 
 $home-width-list: (1:50%, 2:75%);
 @mixin home-width {
@@ -152,24 +153,7 @@ $home-width-list: (1:50%, 2:75%);
     max-width: 80%;
     margin: .5rem 0 0 .5rem;
   }
-  &__icon {
-    align-self: center;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    color: $dark-grey;
-    .fas {
-      display: none;
-    }
-    &:hover {
-      color: $secondary-color;
-      .far {
-        display: none;
-      }
-      .fas {
-        display: unset;
-      }
-    }
-  }
+  @include hearth('.menu-card');
 }
 
 .logo {
