@@ -1,9 +1,16 @@
 @mixin footer {
   background-color: #353535;
   color: white;
-  padding: 1rem;
-  & > p > i {
-    padding-right: .5rem;
-    width: 1rem;
+  padding: 1.5rem;
+  span {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+  & > p {
+    padding-bottom: .5rem;
+    & > i {
+      padding-right: .5rem;
+      width: 1rem;
+    }
   }
 }

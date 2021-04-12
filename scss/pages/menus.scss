@@ -3,15 +3,16 @@
 
 .menus-header {
   display: flex;
+  justify-content: center;
+  position: relative;
+  padding: .5rem 0;
   .return-icon {
-    margin-right: auto;
     background-color: white;
     border: none;
-  }
-  .logo {
-    &--menus {
-      margin-right: auto;
-    }
+    position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    align-self: center;
   }
 }
 
@@ -52,8 +53,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1rem .5rem;
   &__title {
     font-family: Shrikhand;
+    font-weight: 400;
   }
   @include hearth('.menu-header');
 }
@@ -63,11 +66,14 @@
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    font-weight: normal;
+    padding-top: 1rem;
     &::after {
       content: "";
       width: 3.5rem;
-      height: .15rem;
+      height: .2rem;
       background-color:$thrid-color;
+      margin: .5rem 0;
     }
   }
 }
@@ -83,7 +89,7 @@
   overflow: hidden;
   animation: popitem 1s linear;
   animation-fill-mode: forwards;
-  transform: scale(0);
+  opacity: 0;
   .check-wrapper {
     width: 0;
     min-width: 0;
@@ -132,6 +138,7 @@
     margin-left: auto;
     align-self: center;
     margin-right: 1rem;
+    font-weight: bold;
   }
 }
 
