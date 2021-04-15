@@ -17,9 +17,17 @@
 }
 
 .menu {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
   &__img {
     & > img {
       width: 100%;
+      @media (min-width: 768px) {
+        max-height: 30rem;
+        object-fit: cover;
+      }
     }
   }
   &__description {
@@ -30,6 +38,10 @@
     display: flex;
     flex-direction: column;
     margin-top: -3.5rem;
+    @media (min-width: 768px) {
+      width: 60%;
+      align-self: center;
+    }
     & > button {
       align-self: center;
       min-height: 3rem;
@@ -62,12 +74,19 @@
 }
 
 .menu-step {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     font-weight: normal;
     padding-top: 1rem;
+    @media (min-width: 768px) {
+      align-self: center;
+    }
     &::after {
       content: "";
       width: 3.5rem;

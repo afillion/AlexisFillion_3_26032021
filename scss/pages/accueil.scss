@@ -4,15 +4,6 @@
 @import "../partiels/footer";
 @import "../partiels/hearth";
 
-$home-width-list: (1:50%, 2:75%);
-@mixin home-width {
-  @each $key, $value in $home-width-list {
-    &:nth-child(#{$key}) {
-      max-width: $value;
-    }
-  }
-}
-
 .home-body {
   height: 100%;
   position: relative;
@@ -97,6 +88,10 @@ $home-width-list: (1:50%, 2:75%);
     color: white;
     font-weight: bold;
     box-shadow: .25rem .25rem 1rem $grey;
+    @media (min-width: 768px) {
+      min-width: inherit;
+      padding: 0 1rem;
+    }
     &:hover {
       opacity: .8;
       box-shadow: .25rem .25rem 1rem $dark-grey;
@@ -108,6 +103,11 @@ $home-width-list: (1:50%, 2:75%);
   padding: 2rem 1rem;
   h1 {
     padding-bottom: 1rem;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -121,6 +121,10 @@ $home-width-list: (1:50%, 2:75%);
   box-shadow: 0 .25rem .5rem $grey;
   margin-bottom: 1rem;
   min-height: 4.5rem;
+  @media (min-width: 768px) {
+    justify-content: center;
+    max-width: 45%;
+  }
   &:hover {
     background-color: lighten($primary-color, 35%);
   }
@@ -159,6 +163,14 @@ $home-width-list: (1:50%, 2:75%);
   padding: 3rem 1rem;
   h1 {
     padding-bottom: 1.5rem;
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 
@@ -169,6 +181,11 @@ $home-width-list: (1:50%, 2:75%);
   margin-bottom: 1rem;
   min-height: 15rem;
   position: relative;
+  @media (min-width: 768px) {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
   .new {
     display: flex;
     justify-content: center;
