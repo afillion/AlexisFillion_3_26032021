@@ -70,8 +70,8 @@
   background-color:$light-grey;
   text-align: center;
   align-items: center;
-  h1 {
-    max-width: 50%;
+  h2 {
+    max-width: 55%;
     padding: 2rem 0 1rem 0;
   }
   p {
@@ -101,7 +101,7 @@
 
 .home-tuto {
   padding: 2rem 1rem;
-  h1 {
+  h2 {
     padding-bottom: 1rem;
   }
   @media (min-width: 768px) {
@@ -122,7 +122,6 @@
   margin-bottom: 1rem;
   min-height: 4.5rem;
   @media (min-width: 768px) {
-    justify-content: center;
     max-width: 45%;
   }
   &:hover {
@@ -161,7 +160,7 @@
 #restaurants {
   background-color: #e5e5e5;
   padding: 3rem 1rem;
-  h1 {
+  h2 {
     padding-bottom: 1.5rem;
     @media (min-width: 768px) {
       width: 100%;
