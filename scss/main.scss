@@ -9,6 +9,10 @@ body {
   margin: 0;
   height: 0;
   font-family: Roboto;
+  @media (min-width: 768px) {
+    max-width: 60rem;
+    margin: auto;
+  }
 }
 
 h1, h2, h3, p {
